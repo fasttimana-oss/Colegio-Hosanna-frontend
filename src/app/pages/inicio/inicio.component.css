@@ -1,0 +1,536 @@
+@import url(https://fonts.bunny.net/css?family=abel:400);
+@import url('https://fonts.googleapis.com/css?family=Exo:700');
+@import url('https://fonts.googleapis.com/css?family=Abel');
+
+/* Overlay oscuro */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+/* Ajuste imágenes del carrusel */
+.carousel-item img {
+  width: 100%;
+  height: 100vh;   /* ocupa toda la ventana */
+  object-fit: cover;
+}
+
+/* 🔹 Texto animado (para otras secciones, ej: Últimos eventos) */
+.textanimado {
+  font-size: 68px;
+    font-weight: bold;
+    font-family: "Arial";  /* misma que #header h1 */
+    line-height: 1.1;
+  color: transparent;
+  background-image: url('https://i.pinimg.com/1200x/94/46/d3/9446d3956f08f0d31c8e71492e8b9ffd.jpg');
+  background-size: 200%;
+  background-position: 0 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-background 5s infinite alternate linear;
+  text-align: center;
+}
+
+.textanimado h1.food {
+  font-size: 72px;        /* agranda el texto */
+  font-weight: bold;      /* lo pone en negrita */
+  font-family: "Arial", sans-serif;
+  color: #222;
+  text-transform: uppercase; /* mayúsculas */
+  letter-spacing: 2px;    /* separación entre letras */
+}
+
+
+@keyframes animate-background {
+  0% { background-position: 0 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* 🔹 Texto Glow exclusivo del carrusel */
+@property --k {
+  syntax: '<number>';
+  initial-value: 0;
+  inherits: false;
+}
+.textglow {
+  font: 900 clamp(2rem, 6vw, 5rem) sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+
+  background: linear-gradient(
+    90deg,
+    #000,   /* negro */
+    #fff,   /* blanco */
+    #777    /* plomo */
+  );
+  background-size: 200% auto;
+  
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  filter: url(#glow); /* efecto glow SVG */
+  animation: shine 4s linear infinite;
+}
+
+@keyframes shine {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+
+
+
+/* 🔹 Texto Glow exclusivo del carrusel */
+@property --k {
+  syntax: '<number>';
+  initial-value: 0;
+  inherits: false;
+}
+
+.text-carrusel {
+
+
+  background: linear-gradient(
+    90deg,
+    #000,   /* negro */
+    #555,   /* plomo */
+    #fff,   /* blanco */
+    #333    /* plomo oscuro */
+  ) text;
+
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  font: 900 clamp(2rem, 6vw, 5rem) sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+
+  filter: url(#glow);
+  animation: k-carrusel 6s linear infinite;
+}
+
+@keyframes k-carrusel {
+  to { --k: 1; }
+}
+
+.carousel-caption {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center; /* centra vertical */
+  align-items: center;     /* centra horizontal */
+  text-align: center;
+}
+.whatsapp-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  text-align: right;
+  z-index: 1000;
+}
+
+/* Mensaje tipo burbuja */
+.whatsapp-message {
+  background: #25d366;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  opacity: 0;
+  animation: showMessage 5s ease forwards;
+}
+
+/* Animación de mostrar y desaparecer */
+@keyframes showMessage {
+  0% { opacity: 0; transform: translateY(10px); }
+  10% { opacity: 1; transform: translateY(0); }   /* Aparece */
+  80% { opacity: 1; transform: translateY(0); }   /* Se mantiene */
+  100% { opacity: 0; transform: translateY(10px);} /* Desaparece */
+}
+
+/* Botón flotante */
+.whatsapp-button {
+  background: #25d366;
+  border-radius: 50%;
+  padding: 12px;
+  display: inline-block;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-button img {
+  width: 35px;
+  height: 35px;
+}
+
+/* estilos artas */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif; 
+    box-sizing: border-box;
+}
+
+body{
+	background: #1e1f21;
+    color: #fff;
+}
+
+.wrapper{
+    padding: 10px 10%;
+}
+
+#card-area{
+    padding: 50px 0;
+}
+
+.box-area{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.box {
+	border-radius: 15px;
+	position: relative;
+	overflow: hidden;
+	box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+	transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.box img{
+   width: 100%;
+   border-radius: 15px;
+   height: 300px;               /* altura por defecto */
+   object-fit: cover;
+   transition: transform 0.5s;
+}
+
+.overlay-card{
+	width: 100%;
+	height: 0;
+	background: linear-gradient(transparent,#3abe28 58%);
+	border-radius: 15px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 20px;
+	text-align: center;
+	font-size: 14px;
+	transition: height 0.5s;
+}
+
+.overlay-card h3 {
+	font-weight: 500;
+	margin-bottom: 5px;
+	margin-top: 80%;
+	font-family: 'Bebas Neue', sans-serif;
+	font-size: 32px;
+	letter-spacing: 2px;
+}
+
+.overlay-card a {
+	margin-top: 10px;
+	color: #262626;
+	text-decoration: none;
+	font-size: 14px;
+	background: #fff;
+	border-radius: 50px;
+	text-align: center;
+	padding: 5px 15px;
+}
+
+.box:hover img{
+    transform: scale(1.1);
+}
+
+.box:hover .overlay-card{
+    height: 100%;
+}
+
+.fondo-griss {
+  background-color: #1b3f63; /* gris claro */
+  padding: 40px 0;
+
+}
+
+/* ------------------ MEDIA QUERIES ------------------ */
+
+/* Tablets */
+@media (max-width: 992px) {
+    .box img {
+        height: 250px; /* un poco más pequeña */
+    }
+    .overlay-card h3 {
+        font-size: 28px;
+        margin-top: 75%;
+    }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+    .box img {
+        height: 220px;
+    }
+    .overlay-card h3 {
+        font-size: 24px;
+        margin-top: 70%;
+    }
+    .overlay-card {
+        padding: 0 10px;
+        font-size: 13px;
+    }
+}
+
+/* Pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .box img {
+        height: 200px;
+    }
+    .overlay-card h3 {
+        font-size: 20px;
+        margin-top: 65%;
+    }
+    .overlay-card a {
+        font-size: 12px;
+        padding: 4px 12px;
+    }
+}
+
+.name-titulo {
+    font-size: 68px;       /* tamaño de fuente */
+    font-weight: bold;     /* negrita */
+    font-family: "Arial", sans-serif;
+    color: #222;           /* color del texto */
+    text-transform: uppercase; /* opcional: mayúsculas */
+    letter-spacing: 2px;   /* espacio entre letras */
+    line-height: 1.2;      /* altura de línea */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2); /* efecto sutil 3D */
+    background: linear-gradient(90deg, #ff8a00, #e52e71); /* gradiente opcional */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+/* ------------------ ESTILOS  de niveles------------------ */
+
+
+
+.card1 {
+  text-align:center;
+  position: absolute;
+  left: 100px;
+  width: 250px;
+  height: 350px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: linear-gradient(rgb(225,150,58),rgb(227,144,91));
+  transition:.6s;
+  
+  transform: rotatex(75deg) translatey(-200px) translatez(-100px);
+  box-shadow: 0px 20px 60px rgba(0,0,0, 0.5);
+}
+.card1:hover{
+  transform: rotatex(0deg);
+  transform: rotatez(0deg);
+  transition:.6s;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+.card1 img{
+  transform: translateY(15px);
+  width:200px;
+  height:120px;
+}
+h3{
+  font-size:25px;
+  font-family: 'Abel', sans-serif;
+  color:rgb(255,255,255);
+  text-shadow: 0 0 2px rgb(255,255,255);
+  transform: translatey(10px);
+}
+
+p{
+  
+  font-family: 'Abel', sans-serif;
+  color: white;
+  text-align:center;
+  width:220px;
+  transform: translatex(12px);
+}
+
+
+.card2 {
+  text-align:center;
+  position: absolute;
+  left: 550px;
+  width: 250px;
+  height: 350px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: linear-gradient(rgb(93,94,170),rgb(93,66,103));
+  animation: animate 1s linear infinite;
+  transition:.6s;
+  
+  transform: rotatex(75deg) translatey(-200px) translatez(-100px);
+  box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.5);
+}
+.card2:hover{
+   transform: rotatex(0deg);
+  transition:.6s;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+.card2 img{
+  transform: translateY(15px);
+  width:180px;
+  height:150px;
+}
+.card3 {
+  text-align:center;
+  position: absolute;
+  left: 1000px;
+  width: 250px;
+  height: 350px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: linear-gradient(#ff5252, #b33939);
+  transition:.6s;
+  
+  transform: rotatex(75deg) translatey(-200px) translatez(-100px);
+  box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.5);
+}
+.card3:hover{
+   transform: rotatex(0deg);
+  transition:.6s;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+.card3 img{
+  transform: translateY(15px);
+  width:200px;
+  height:120px;
+}
+.footer{
+  position: absolute;
+  top: 500px;
+  marging: 10px;
+  width: 100%;
+   text-align: center;
+}
+.footer h2{
+  font-size:18px;
+  font-family: 'Exo', sans-serif;
+  
+}
+
+
+
+
+
+/* Contenedor de las cards */
+.niveles-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 50px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Card individual */
+.card_niveles {
+  width: 24rem;
+  height: 36rem;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  color: rgb(240, 240, 240);
+  box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen de fondo */
+.card_niveles img {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.9;
+  transition: opacity .2s ease-out;
+}
+
+/* Contenido */
+.card_niveles h2 {
+  position: absolute;
+  inset: auto auto 30px 30px;
+  margin: 0;
+  transition: inset .3s .3s ease-out;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.card_niveles p,
+.card_niveles a {
+  position: absolute;
+  opacity: 0;
+  max-width: 80%;
+  transition: opacity .3s ease-out;
+}
+
+.card_niveles p {
+  inset: auto auto 80px 30px;
+}
+
+.card_niveles a {
+  inset: auto auto 40px 30px;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Hover Effects */
+.card_niveles:hover h2 {
+  inset: auto auto 220px 30px;
+  transition: inset .3s ease-out;
+}
+
+.card_niveles:hover p,
+.card_niveles:hover a {
+  opacity: 1;
+  transition: opacity .5s .1s ease-in;
+}
+
+.card_niveles:hover img {
+  transition: opacity .3s ease-in;
+  opacity: 1;
+}
+
+/* Iconos alineados */
+.material-symbols-outlined {
+  vertical-align: middle;
+}
+

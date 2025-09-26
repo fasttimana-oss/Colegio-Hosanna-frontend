@@ -1,0 +1,94 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Panel de Admin</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+            data-bs-target="#navbarNavAdmin" aria-controls="navbarNavAdmin" 
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavAdmin">
+      <ul class="navbar-nav">
+
+        <!-- Usuarios -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="usuariosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Usuarios
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="usuariosDropdown">
+            <li> <a class="dropdown-item" routerLink="users/create">Crear Usuarios</a></li>
+            <li><a class="dropdown-item" routerLink="users/list">Administrar Usuarios </a></li>
+          </ul>
+        </li>
+
+        <!-- Cursos -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="cursosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Cursos
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="cursosDropdown">
+            <li><a class="dropdown-item" href="#">Cursos</a></li>
+            <li><a class="dropdown-item" href="#">Administrar Cursos</a></li>
+          </ul>
+        </li>
+
+        <!-- Alumnos -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="alumnosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Alumnos
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="alumnosDropdown">
+            <li><a class="dropdown-item" href="#">Agregar Alumno</a></li>
+            <li><a class="dropdown-item" href="#">Gestionar Alumnos</a></li>
+          </ul>
+        </li>
+
+        <!-- Eventos -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="eventosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Eventos
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="eventosDropdown">
+            <li><a class="dropdown-item" routerLink="eventos/create">Crear Evento</a></li>
+            <li><a class="dropdown-item" href="#">Descripción</a></li>
+            <li><a class="dropdown-item" href="#">Imagen</a></li>
+          </ul>
+        </li>
+
+        <!-- Grado -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="gradoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Grado
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="gradoDropdown">
+            <li><a class="dropdown-item" href="#">Grado</a></li>
+            <li><a class="dropdown-item" href="#">Administrar Grados</a></li>
+          </ul>
+        </li>
+
+        <!-- Pagos -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="pagosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Pagos
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="pagosDropdown">
+            <li><a class="dropdown-item" href="#">Registrar Pagos</a></li>
+            <li><a class="dropdown-item" href="#">Ver Pagos</a></li>
+          </ul>
+        </li>
+
+        <!-- Nivel -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="nivelDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Nivel
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="nivelDropdown">
+            <li><a class="dropdown-item" routerLink="nivel/create">Crear Nivel</a></li>
+            <li><a class="dropdown-item" routerLink="nivel/list">Administrar Niveles</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>

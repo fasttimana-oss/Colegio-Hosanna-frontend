@@ -1,0 +1,52 @@
+.dashboard-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.titulo {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+.menu-admin ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.menu-admin li {
+  margin: 0;
+}
+
+.menu-admin a {
+  display: block;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  background: #2c3e50;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.menu-admin a:hover {
+  background: #1abc9c;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.contenido {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  background: #f9f9f9;
+  min-height: 300px;
+}
