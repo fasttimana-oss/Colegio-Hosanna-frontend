@@ -1,43 +1,103 @@
-/* Navbar más elegante */
+/* =========================================================
+   CAMBIO HECHO POR SHARON (20/10/2025)
+   - Se agregó importación de fuente moderna 'Poppins' de Google Fonts
+   - Mejora de la tipografía general para una apariencia más profesional
+   ========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* =========================================================
+   CAMBIO HECHO POR SHARON
+   - Se actualizó el tipo de letra de todo el navbar para usar 'Poppins'
+   - Se aumentó el tamaño base ligeramente y se ajustó el interlineado
+   ========================================================= */
 .navbar {
+  font-family: 'Poppins', sans-serif;
   font-size: 1.05rem;
+  letter-spacing: 0.5px;
+  background: transparent !important;
 }
 
+/* =========================================================
+   CAMBIO HECHO POR SHARON
+   - Se mejoró el título del navbar para resaltar el nombre del colegio
+   - Se cambió el tamaño de letra y se aplicó un ligero sombreado de texto
+   ========================================================= */
 .navbar-brand {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #ffffff !important;
   letter-spacing: 1px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
 }
 
+/* =========================================================
+   CAMBIO HECHO POR SHARON
+   - Se mejoró la apariencia de los enlaces con transición más suave
+   - Se cambió el color hover a un dorado suave para elegancia
+   ========================================================= */
 .nav-link {
-  transition: 0.3s;
-  margin: 0 5px;
-  border-radius: 5px;
+  transition: all 0.3s ease;
+  margin: 0 6px;
+  border-radius: 6px;
   padding: 6px 12px;
+  color: #ffffff !important;
+  font-weight: 500;
 }
 
 .nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  color: #ffe600 !important;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #FFD700 !important;
 }
 
+/* =========================================================
+   CAMBIO HECHO POR SHARON
+   - Se mejoró el estilo activo con un borde inferior más visible
+   ========================================================= */
 .nav-link.active {
-  font-weight: bold;
-  border-bottom: 2px solid #ffe600;
+  font-weight: 600;
+  border-bottom: 3px solid #FFD700;
 }
 
+/* =========================================================
+   CÓDIGO ORIGINAL (YA NO SE USA, PERO SE CONSERVA COMO REFERENCIA)
+   ---------------------------------------------------------
+   .nav-link:hover {
+     background-color: rgba(255, 255, 255, 0.2);
+     color: #ffe600 !important;
+   }
+   .nav-link.active {
+     font-weight: bold;
+     border-bottom: 2px solid #ffe600;
+   }
+   ========================================================= */
+
+/* =========================================================
+   CAMBIO HECHO POR SHARON
+   - Ajuste del logo para mantener proporción y armonía visual
+   ========================================================= */
 .logo {
-  height: 50px;       /* Controla la altura del logo */
-  width: auto;        /* Mantiene la proporción */
-  margin-left: 10px;  /* Separación del texto si lo necesitas */
+  height: 50px;
+  width: auto;
+  margin-left: 10px;
 }
+
+/* =========================================================
+   CAMBIO HECHO POR SHARON
+   - Navbar transparente colocada sobre imagen con prioridad visual
+   ========================================================= */
 .navbar-transparent {
-  background: transparent !important; /* lo hace transparente */
-  position: absolute; /* lo coloca sobre la imagen */
+  background: transparent !important;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000; /* asegura que quede encima del contenido */
+  z-index: 1000;
 }
+
+/* =========================================================
+   CAMBIO HECHO POR SHARON
+   - Overlay para dar un efecto elegante sobre imagen de fondo
+   ========================================================= */
 .overlay {
   position: absolute;
   top: 0;
@@ -46,5 +106,3 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
 }
-
-
