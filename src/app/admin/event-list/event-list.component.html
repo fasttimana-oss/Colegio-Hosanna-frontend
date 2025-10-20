@@ -1,1 +1,38 @@
-<p>event-list works!</p>
+<div class="container mt-4">
+  <h2>Lista de Eventos</h2>
+  <div *ngIf="mensaje" class="alert alert-info mt-2">{{ mensaje }}</div>
+
+  <table class="table table-striped mt-3">
+    <thead>
+      <tr>
+        <th>Imagen</th>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Fecha</th>
+        <th>Publicado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let evento of eventos">
+        <td><img [src]="evento.img" alt="" width="100"></td>
+        <td>{{ evento.nombre }}</td>
+        <td>{{ evento.descripcion }}</td>
+        <td>{{ evento.fecha | date }}</td>
+        <td>
+          <span class="badge" [ngClass]="evento.publicado ? 'bg-success' : 'bg-secondary'">
+            {{ evento.publicado ? 'Sí' : 'No' }}
+          </span>
+        </td>
+        <td>
+          <button class="btn btn-sm"
+            [ngClass]="evento.publicado ? 'btn-danger' : 'btn-primary'"
+            (click)="publicarEvento(evento)">
+            {{ evento.publicado ? 'Despublicar' : 'Publicar' }}
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

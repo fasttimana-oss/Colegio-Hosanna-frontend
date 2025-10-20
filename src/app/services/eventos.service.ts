@@ -9,6 +9,8 @@ export interface Evento{
   descripcion: string;
   img: string;
   fecha: string;
+  publicado : boolean;
+
 }
 
 @Injectable({
@@ -53,6 +55,12 @@ export class EventosService {
      return this.http.delete<void>(`${this.apiUrl}/${id}`);
  }
 
+ //estado de  eventos 
+ updateEvento(id:number, data:Partial<Evento>){
+  return  this.http.patch(`${this.apiUrl}/${id}`, data);
+  
+ }
+
 
  
 
@@ -61,3 +69,8 @@ export class EventosService {
 
 
 }
+  
+
+
+
+
