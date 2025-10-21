@@ -1,107 +1,183 @@
+/* =========================================================
+   CAMBIO HECHO POR SHARON (21/10/2025)
+   - Se agregó importación de la fuente 'Poppins' de Google Fonts
+   - Mejora tipográfica general para un estilo más moderno y profesional
+   ========================================================= */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* =========================================================
+   CAMBIO HECHO POR SHARON (21/10/2025)
+   - Se mantiene Font Awesome para los íconos profesionales
+   ========================================================= */
 @import url("https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css");
-@import url("https://fonts.googleapis.com/css2?family=Jura:wght@500;600;900&display=swap");
 
-.position-absolute {
- 
-  padding: 10px;
-  border-radius: 10px;
+/* =========================================================
+   CÓDIGO ORIGINAL (YA NO SE USA COMPLETAMENTE)
+   ---------------------------------------------------------
+   @import url("https://fonts.googleapis.com/css2?family=Jura:wght@500;600;900&display=swap");
+   ========================================================= */
 
-}
-.img-opacity {
-  filter: opacity(50%);
-}
-.position-absolute h3 {
-  font-weight: 900 !important; /* mucho más grueso */
-  font-size: 2rem;
-  font-family: Arial, Helvetica, sans-serif; /* prueba con otra fuente */
-}
-h3{
-    font-family: Arial, Helvetica, sans-serif;
-    color: black;
-}
-.textanimado{
-  position: center;
-  font-size: 8rem;
-  font-weight: bold;
-  color: transparent;
-  background-image:
-  url('https://cdn.pixabay.com/video/2024/05/05/210797_tiny.jpg');
-      background-size: 200%; /* Enlarged for smooth animation */
-    background-position: 0 50%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: animate-background 5s infinite alternate linear;
-
- text-align: center;   
-}
-
-@keyframes animate-background {
-    0% {
-        background-position: 0 50%;
-    }
-    100% {
-        background-position: 100% 50%;
-    }
-}
-.same-height {
-  height: 350px;         /* Fija altura igual para todas */
-  object-fit: cover;     /* Ajusta la imagen sin deformarla */
-}
-
-/* 🔹 Fondo con gradiente animado */
+/* =========================================================
+   CAMBIO HECHO POR SHARON (21/10/2025)
+   - Tipografía general actualizada a 'Poppins'
+   ========================================================= */
 body {
+  font-family: "Poppins", sans-serif;
   overflow: hidden;
   background-image: linear-gradient(90deg, #ff8a00, #e52e71);
   background-size: 400% 400%;
   animation: background 10s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  color: #222;
 }
 
-/* 🔹 Imagen animada */
-.logo-animado {
-  max-width: 300px;
-  animation: spin 6s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+/* =========================================================
+   CAMBIO HECHO POR SHARON (21/10/2025)
+   - Sección de imágenes fijas con mejor espaciado y estilo visual
+   ========================================================= */
+.position-absolute {
+  padding: 10px;
+  border-radius: 10px;
 }
 
-/* Hover efecto */
-.logo-animado:hover {
-  opacity: 0.8;
-  transform: scale(1.05);
+.img-opacity {
+  filter: brightness(80%) contrast(110%);
 }
 
-/* 🔹 Animaciones */
+/* =========================================================
+   CAMBIO HECHO POR SHARON (21/10/2025)
+   - Mejora de la jerarquía visual de los títulos h3
+   ========================================================= */
+.position-absolute h3 {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+h3 {
+  font-family: "Poppins", sans-serif;
+  color: black;
+}
+
+/* =========================================================
+   CAMBIO HECHO POR SHARON (21/10/2025)
+   - Texto animado con mejor legibilidad
+   ========================================================= */
+.textanimado {
+  font-size: 6rem;
+  font-weight: 700;
+  color: transparent;
+  background-image: url('https://cdn.pixabay.com/video/2024/05/05/210797_tiny.jpg');
+  background-size: 200%;
+  background-position: 0 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-background 6s infinite alternate linear;
+  text-align: center;
+}
+
+/* Animación fondo texto */
+@keyframes animate-background {
+  0% { background-position: 0 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* Altura uniforme para imágenes */
+.same-height {
+  height: 350px;
+  object-fit: cover;
+}
+
+/* Fondo animado */
 @keyframes background {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
+/* =========================================================
+   CAMBIO HECHO POR SHARON (21/10/2025)
+   - Mejora del logo animado con giro suave y efecto elegante
+   ========================================================= */
+.logo-animado {
+  max-width: 280px;
+  animation: spin 6s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.logo-animado:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
 @keyframes spin {
-  0%   { transform: rotate(0deg) scale(1); }
-  50%  { transform: rotate(360deg) scale(0.7); }
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(360deg) scale(0.8); }
   100% { transform: rotate(720deg) scale(1); }
 }
 
+/* =========================================================
+   CAMBIO HECHO POR SHARON (21/10/2025)
+   - Estilo profesional para tarjetas de Misión y Visión
+   - Fondo más oscuro para resaltar texto y mejorar contraste
+   ========================================================= */
+.tarjeta-info {
+  background: rgba(0, 0, 0, 0.7); /* 🔹 Más oscuro para resaltar texto */
+  color: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  width: 90%;
+  max-width: 500px;
+  backdrop-filter: blur(10px);
+  margin: auto;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.tarjeta-info:hover {
+  background: rgba(0, 0, 0, 0.8); /* 🔹 Aún más oscuro al pasar el cursor */
+  transform: translateY(-5px);
+}
 
+.tarjeta-info h3 {
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #FFD700;
+  text-transform: uppercase;
+  text-align: center;
+}
+.tarjeta-info p {
+  font-size: 1rem;
+  color: #f8f8f8;
+  text-align: justify;
+}
 
+/* =========================================================
+   CÓDIGO ORIGINAL (YA NO SE USA, PERO SE CONSERVA)
+   ---------------------------------------------------------
+   .position-absolute h3 {
+     font-weight: 900 !important;
+     font-size: 2rem;
+     font-family: Arial, Helvetica, sans-serif;
+   }
+   ========================================================= */
 
-/* Estilos para valores */
-/* 🎨 Estilos exclusivos para la sección de valores */
-
-
-/* 🎯 Sección exclusiva de valores */
+/* =========================================================
+   CAMBIO HECHO POR SHARON (21/10/2025)
+   - Diseño profesional para la sección de valores
+   ========================================================= */
 .valores {
   --color: rgba(30, 30, 30);
   --bgColor: rgba(245, 245, 245);
   min-height: 100vh;
-
   display: grid;
   align-content: center;
   gap: 2rem;
   padding: 2rem;
-
-  font-family: "Jura", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: var(--color);
   background: var(--bgColor);
 }
@@ -109,127 +185,57 @@ body {
 .valores h1 {
   text-align: center;
   margin-bottom: 1.5rem;
-  font-weight: 900;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #222;
 }
 
-/* UL exclusivo */
+/* Tarjetas de valores */
 .valores .banner-cards {
-  --col-gap: 2rem;
-  --barH: 1rem;
-  --roleH: 2rem;
-  --flapH: 2rem;
-
-  width: min(60rem, 90%);
-  margin-inline: auto;
-
   display: flex;
   flex-wrap: wrap;
-
-  gap: var(--col-gap);
-  padding-inline: calc(var(--col-gap) / 2);
-
+  gap: 2rem;
   justify-content: center;
-  align-items: flex-start;
   list-style: none;
+  padding: 0;
 }
 
 .valores .banner-cards li {
-  width: 10em;
+  width: 12em;
   display: grid;
   grid-template:
-    "role"
     "icon"
     "title"
     "descr";
   align-items: flex-start;
   gap: 1rem;
-  padding-block-end: calc(var(--flapH) + 1rem);
+  padding: 2rem;
   text-align: center;
   background: var(--accent-color);
-  background-image: linear-gradient(
-    rgba(0, 0, 0, 0.6) var(--roleH),
-    rgba(0, 0, 0, 0.4) calc(var(--roleH) + 0.5rem),
-    rgba(0, 0, 0, 0) calc(var(--roleH) + 0.5rem + 5rem)
-  );
-  clip-path: polygon(
-    calc(var(--col-gap) / -2 - 5px) 0,
-    calc(100% + var(--col-gap) / 2 + 5px) 0,
-    calc(100% + var(--col-gap) / 2 + 5px) calc(100% - var(--flapH)),
-    50% 100%,
-    calc(var(--col-gap) / -2 - 5px) calc(100% - var(--flapH))
-  );
-  transition: transform 0.3s ease;
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .valores .banner-cards li:hover {
   transform: translateY(-6px);
-}
-
-/* bar */
-.valores .banner-cards li::before {
-  content: "";
-  grid-area: role;
-  height: var(--barH);
-  width: calc(100% + var(--col-gap));
-  margin-left: calc(var(--col-gap) / -2);
-  margin-top: calc(var(--roleH) / 2 - var(--barH) / 2);
-  background: grey;
-  z-index: -1;
-  background-image: linear-gradient(
-    rgba(255, 255, 255, 0.4),
-    rgba(255, 255, 255, 0.2) 30%,
-    rgba(255, 255, 255, 0.1) 40%,
-    rgba(0, 0, 0, 0.1) 60%,
-    rgba(0, 0, 0, 0.2) 70%,
-    rgba(0, 0, 0, 0.4)
-  );
-}
-
-/* role */
-.valores .banner-cards li::after {
-  content: "";
-  grid-area: role;
-  background: var(--accent-color);
-  background-image: linear-gradient(
-    rgba(255, 255, 255, 0.4),
-    rgba(255, 255, 255, 0.2) 30%,
-    rgba(255, 255, 255, 0.1) 40%,
-    rgba(0, 0, 0, 0.1) 60%,
-    rgba(0, 0, 0, 0.2) 70%,
-    rgba(0, 0, 0, 0.4)
-  );
-  height: var(--roleH);
-}
-
-.valores .banner-cards li .icon,
-.valores .banner-cards li .title,
-.valores .banner-cards li .descr {
-  padding-inline: 1rem;
-  color: white;
-  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
 .valores .banner-cards li .icon {
   font-size: 3rem;
+  color: #fff;
 }
-
 .valores .banner-cards li .title {
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
 }
-
 .valores .banner-cards li .descr {
   font-size: 0.9rem;
+  color: #f1f1f1;
 }
 
-/* 📱 Responsive */
 @media (max-width: 768px) {
-  .valores .banner-cards {
-    gap: 1rem;
-  }
-
-  .valores .banner-cards li {
-    width: 100%;
-    max-width: 16rem;
-  }
+  .textanimado { font-size: 3.5rem; }
+  .valores .banner-cards li { width: 100%; max-width: 18rem; }
 }
+
