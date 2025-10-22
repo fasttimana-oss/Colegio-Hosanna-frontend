@@ -1,0 +1,27 @@
+<div class="container mt-4">
+  <h3>Crear Grado</h3>
+
+  <!-- 🔹 Mensaje de éxito -->
+  <div *ngIf="mensajeExito" class="alert alert-success mt-3">
+    {{ mensajeExito }}
+  </div>
+
+  <form [formGroup]="formGrado" (ngSubmit)="crearGrado()">
+    <div class="mb-3">
+      <label>Nombre del Grado:</label>
+      <input type="text" class="form-control" formControlName="nombre" />
+    </div>
+
+    <div class="mb-3">
+      <label>Nivel:</label>
+      <select class="form-select" formControlName="nivelId">
+        <option value="">Seleccione un nivel</option>
+        <option *ngFor="let nivel of niveles" [value]="nivel.id">
+          {{ nivel.nombre }}
+        </option>
+      </select>
+    </div>
+
+    <button class="btn btn-primary" type="submit">Guardar</button>
+  </form>
+</div>

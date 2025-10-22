@@ -7,6 +7,7 @@ import { NivelCreateComponent } from './nivel-create/nivel-create.component';
 import { NivelListComponent } from './nivel-list/nivel-list.component';
 import { EventoCreateComponent } from './evento-create/evento-create.component';
 import { EventListComponent } from './event-list/event-list.component';
+import { GradoCreateComponent } from './grado-create/grado-create.component';
 const routes: Routes = [
   {path: '', component: DashboardComponent},
   {path: 'users/create', component: UsersCreateComponent},
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path: 'nivel/create', component: NivelCreateComponent},
   {path: 'nivel/list', component: NivelListComponent},
   {path: 'eventos/create', component: EventoCreateComponent},
-   {path: 'eventos/list', component: EventListComponent}
+  {path: 'eventos/list', component: EventListComponent},
+  {path: 'grados/create', component: GradoCreateComponent}
 
 
 

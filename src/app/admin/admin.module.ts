@@ -10,6 +10,8 @@ import { NivelListComponent } from './nivel-list/nivel-list.component';
 import { EventoCreateComponent } from './evento-create/evento-create.component';
 import { EventListComponent } from './event-list/event-list.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { GradoCreateComponent } from './grado-create/grado-create.component';
+import { GradoListComponent } from './grado-list/grado-list.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     NivelCreateComponent,
     NivelListComponent,
     EventoCreateComponent,
-    EventListComponent
+    EventListComponent,
+    GradoCreateComponent,
+    GradoListComponent
   ],
   imports: [
     CommonModule,
