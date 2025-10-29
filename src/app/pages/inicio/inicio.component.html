@@ -1,7 +1,20 @@
 <app-navbar></app-navbar>
 
-<!-- 🔹 Carrusel -->
-<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+<!-- =========================================================
+     CARRUSEL PRINCIPAL (CÓDIGO ORIGINAL)
+     - Mantiene el efecto "fade"
+     - Carrusel automático
+     - Puntitos (indicadores) en color blanco
+     ========================================================= -->
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
+
+  <!-- 🔸 Indicadores tipo puntitos -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Imagen 1"></button>
+    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1" aria-label="Imagen 2"></button>
+    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2" aria-label="Imagen 3"></button>
+  </div>
+
   <div class="carousel-inner">
 
     <!-- Slide 1 -->
@@ -35,7 +48,7 @@
     </div>
   </div>
 
-  <!-- Controles -->
+  <!-- Flechas (ocultas en CSS) -->
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
     <span class="carousel-control-prev-icon"></span>
     <span class="visually-hidden">Previous</span>
@@ -46,11 +59,7 @@
   </button>
 </div>
 
-<!-- 🔹 Texto animado (otra parte de la página) -->
-
-
 <!-- 🔹 Cards de eventos -->
-
 <section class="fondo-griss">
   <div class="textanimado">
     <h1 class="food">Últimos Eventos</h1>
@@ -72,65 +81,56 @@
   </div>
 </section>
 
-
-
-
 <!-- 🔹 Niveles académicos -->
 <section>
   <div class="text-center" id="header">
-        <h1 class="name-titulo">
-                NUESTROS NIVELES ACADÉMICOS
-        </h1>
+    <h1 class="name-titulo">
+      NUESTROS NIVELES ACADÉMICOS
+    </h1>
+  </div>
+
+  <main class="niveles-container">
+    <div class="card_niveles">
+      <img src="https://i.pinimg.com/1200x/5d/4f/5c/5d4f5c7ac599c442cd8f350a6e802f8b.jpg" alt="">
+      <div class="card_niveles-content">
+        <h2>Inicial</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, ipsa.</p>
+        <a href="#">
+          Más info
+          <span class="material-symbols-outlined">arrow_right_alt</span>
+        </a>
       </div>
-
-<main class="niveles-container">
-  <div class="card_niveles">
-    <img src="https://i.pinimg.com/1200x/5d/4f/5c/5d4f5c7ac599c442cd8f350a6e802f8b.jpg" alt="">
-    <div class="card_niveles-content">
-      <h2>Inicial</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, ipsa.</p>
-      <a href="#">
-        Más info 
-        <span class="material-symbols-outlined">arrow_right_alt</span>
-      </a>
     </div>
-  </div>
 
-  <div class="card_niveles">
-    <img src="https://i.pinimg.com/736x/e7/9b/79/e79b79762eededa8b5d6d825d3ea9892.jpg" alt="">
-    <div class="card_niveles-content">
-      <h2>Primaria</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, atque.</p>
-      <a href="#">
-        Más info 
-        <span class="material-symbols-outlined">arrow_right_alt</span>
-      </a>
+    <div class="card_niveles">
+      <img src="https://i.pinimg.com/736x/e7/9b/79/e79b79762eededa8b5d6d825d3ea9892.jpg" alt="">
+      <div class="card_niveles-content">
+        <h2>Primaria</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, atque.</p>
+        <a href="#">
+          Más info
+          <span class="material-symbols-outlined">arrow_right_alt</span>
+        </a>
+      </div>
     </div>
-  </div>
 
-  <div class="card_niveles">
-    <img src="https://i.pinimg.com/736x/96/f9/25/96f9258f6140c474c48f3272721614df.jpg" alt="">
-    <div class="card_niveles-content">
-      <h2>Secundaria</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, dolore.</p>
-      <a href="#">
-        Más info 
-        <span class="material-symbols-outlined">arrow_right_alt</span>
-      </a>
+    <div class="card_niveles">
+      <img src="https://i.pinimg.com/736x/96/f9/25/96f9258f6140c474c48f3272721614df.jpg" alt="">
+      <div class="card_niveles-content">
+        <h2>Secundaria</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, dolore.</p>
+        <a href="#">
+          Más info
+          <span class="material-symbols-outlined">arrow_right_alt</span>
+        </a>
+      </div>
     </div>
-  </div>
-</main>
+  </main>
+</section>
 
-
-
-
+<!-- 🔹 WhatsApp flotante -->
 <div class="whatsapp-container">
-  <!-- Mensaje emergente -->
-  <div class="whatsapp-message">
-    ¿Cómo podemos ayudarte?
-  </div>
-
-  <!-- Botón -->
+  <div class="whatsapp-message">¿Cómo podemos ayudarte?</div>
   <a href="https://wa.me/51987654321" target="_blank" class="whatsapp-button">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
   </a>
@@ -138,7 +138,6 @@
 
 <app-footer></app-footer>
 
-<!-- 🔹 SVG filtro glow -->
 <!-- SVG FILTER (efecto glow) -->
 <svg width="0" height="0" aria-hidden="true">
   <filter id="glow" x="-50%" y="-200%" width="200%" height="500%" primitiveUnits="objectBoundingBox">
@@ -147,6 +146,3 @@
     <feBlend in="SourceGraphic"></feBlend>
   </filter>
 </svg>
-
-<!-- TEXTO CON EFECTO -->
-

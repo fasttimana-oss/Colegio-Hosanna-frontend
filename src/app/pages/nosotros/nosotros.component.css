@@ -12,133 +12,128 @@
 @import url("https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css");
 
 /* =========================================================
-   CÓDIGO ORIGINAL (YA NO SE USA COMPLETAMENTE)
-   ---------------------------------------------------------
-   @import url("https://fonts.googleapis.com/css2?family=Jura:wght@500;600;900&display=swap");
-   ========================================================= */
-
-/* =========================================================
    CAMBIO HECHO POR SHARON (21/10/2025)
    - Tipografía general actualizada a 'Poppins'
    ========================================================= */
 body {
   font-family: "Poppins", sans-serif;
-  overflow: hidden;
-  background-image: linear-gradient(90deg, #ff8a00, #e52e71);
-  background-size: 400% 400%;
-  animation: background 10s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  overflow-x: hidden;
+  background: #f8f9fa;
   color: #222;
 }
 
 /* =========================================================
-   CAMBIO HECHO POR SHARON (21/10/2025)
-   - Sección de imágenes fijas con mejor espaciado y estilo visual
+   CAMBIO HECHO POR SHARON (29/10/2025)
+   - Mejora visual del contenedor principal (espaciado y equilibrio)
    ========================================================= */
-.position-absolute {
-  padding: 10px;
-  border-radius: 10px;
-}
-
-.img-opacity {
-  filter: brightness(80%) contrast(110%);
+.container {
+  max-width: 1200px;
+  padding: 2rem 1rem;
 }
 
 /* =========================================================
-   CAMBIO HECHO POR SHARON (21/10/2025)
-   - Mejora de la jerarquía visual de los títulos h3
+   CAMBIO HECHO POR SHARON (29/10/2025)
+   - Se optimizó el estilo de la sección de historia (alineación y legibilidad)
    ========================================================= */
-.position-absolute h3 {
+.row.align-items-center {
+  margin-top: 2rem;
+}
+
+.row.align-items-center h2 {
+  font-size: 2.5rem;
   font-weight: 700;
-  font-size: 2rem;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  color: #002D5C;
+  margin-bottom: 1rem;
 }
 
-h3 {
-  font-family: "Poppins", sans-serif;
-  color: black;
-}
-
-/* =========================================================
-   CAMBIO HECHO POR SHARON (21/10/2025)
-   - Texto animado con mejor legibilidad
-   ========================================================= */
-.textanimado {
-  font-size: 6rem;
-  font-weight: 700;
-  color: transparent;
-  background-image: url('https://cdn.pixabay.com/video/2024/05/05/210797_tiny.jpg');
-  background-size: 200%;
-  background-position: 0 50%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: animate-background 6s infinite alternate linear;
-  text-align: center;
-}
-
-/* Animación fondo texto */
-@keyframes animate-background {
-  0% { background-position: 0 50%; }
-  100% { background-position: 100% 50%; }
-}
-
-/* Altura uniforme para imágenes */
-.same-height {
-  height: 350px;
-  object-fit: cover;
-}
-
-/* Fondo animado */
-@keyframes background {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+.row.align-items-center p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  text-align: justify;
+  color: #333;
 }
 
 /* =========================================================
-   CAMBIO HECHO POR SHARON (21/10/2025)
-   - Mejora del logo animado con giro suave y efecto elegante
+   CAMBIO HECHO POR SHARON (29/10/2025)
+   - Ajuste del tamaño del logo animado para mejor proporción visual
+   - Mantiene animación y estilo elegante
    ========================================================= */
 .logo-animado {
-  max-width: 280px;
+  max-width: 180px;
   animation: spin 6s cubic-bezier(0.5, 0, 0.5, 1) infinite;
   transition: transform 0.3s ease, opacity 0.3s ease;
+  margin-bottom: 20px;
 }
+
 .logo-animado:hover {
   opacity: 0.9;
   transform: scale(1.05);
 }
 
+/* =========================================================
+   CAMBIO HECHO POR SHARON (29/10/2025)
+   - Animación optimizada para mantener suavidad y equilibrio
+   ========================================================= */
 @keyframes spin {
   0% { transform: rotate(0deg) scale(1); }
-  50% { transform: rotate(360deg) scale(0.8); }
+  50% { transform: rotate(360deg) scale(0.85); }
   100% { transform: rotate(720deg) scale(1); }
 }
 
 /* =========================================================
-   CAMBIO HECHO POR SHARON (21/10/2025)
-   - Estilo profesional para tarjetas de Misión y Visión
-   - Fondo más oscuro para resaltar texto y mejorar contraste
+   CAMBIO HECHO POR SHARON (29/10/2025)
+   - Mejora de responsividad para pantallas pequeñas
+   ========================================================= */
+@media (max-width: 768px) {
+  .logo-animado { max-width: 140px; }
+  .col-md-6.text-center img.logo-animado { margin-bottom: 15px; }
+  .row.align-items-center h2 { font-size: 2rem; text-align: center; }
+  .row.align-items-center p { text-align: center; font-size: 1rem; }
+}
+
+/* =========================================================
+   CAMBIO HECHO POR SHARON (29/10/2025)
+   - Mejora visual en imágenes de Misión y Visión (balance y contraste)
+   ========================================================= */
+.img-opacity {
+  filter: brightness(75%) contrast(110%);
+  border-radius: 12px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.img-opacity:hover {
+  transform: scale(1.03);
+  filter: brightness(85%) contrast(115%);
+}
+
+.same-height {
+  height: 400px; /* 🔹 Más alta para proporción más elegante */
+  object-fit: cover;
+}
+
+/* =========================================================
+   CAMBIO HECHO POR SHARON (29/10/2025)
+   - Ajuste estético de las tarjetas de Misión y Visión
+   - Se mejora el contraste y la alineación del texto
    ========================================================= */
 .tarjeta-info {
-  background: rgba(0, 0, 0, 0.7); /* 🔹 Más oscuro para resaltar texto */
+  background: rgba(0, 0, 0, 0.7);
   color: #fff;
   border-radius: 12px;
-  padding: 30px;
-  width: 90%;
-  max-width: 500px;
+  padding: 40px 30px;
+  width: 85%;
+  max-width: 480px;
   backdrop-filter: blur(10px);
   margin: auto;
   font-family: "Poppins", sans-serif;
-  line-height: 1.6;
+  line-height: 1.7;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
   transition: background 0.3s ease, transform 0.3s ease;
 }
+
 .tarjeta-info:hover {
-  background: rgba(0, 0, 0, 0.8); /* 🔹 Aún más oscuro al pasar el cursor */
-  transform: translateY(-5px);
+  background: rgba(0, 0, 0, 0.8);
+  transform: translateY(-6px);
 }
 
 .tarjeta-info h3 {
@@ -149,6 +144,7 @@ h3 {
   text-transform: uppercase;
   text-align: center;
 }
+
 .tarjeta-info p {
   font-size: 1rem;
   color: #f8f8f8;
@@ -156,41 +152,77 @@ h3 {
 }
 
 /* =========================================================
-   CÓDIGO ORIGINAL (YA NO SE USA, PERO SE CONSERVA)
-   ---------------------------------------------------------
-   .position-absolute h3 {
-     font-weight: 900 !important;
-     font-size: 2rem;
-     font-family: Arial, Helvetica, sans-serif;
-   }
+   CAMBIO HECHO POR SHARON (29/10/2025)
+   - Optimización del texto animado “Nuestros valores”
+   - Se mejora la visibilidad y armonía con el fondo
    ========================================================= */
+.textanimado {
+  font-size: 4.5rem;
+  font-weight: 800;
+  background-image: linear-gradient(90deg, #FFD700, #002D5C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
 /* =========================================================
-   CAMBIO HECHO POR SHARON (21/10/2025)
+   CAMBIO HECHO POR SHARON (29/10/2025)
    - Diseño profesional para la sección de valores
    ========================================================= */
 .valores {
-  --color: rgba(30, 30, 30);
-  --bgColor: rgba(245, 245, 245);
+  background: linear-gradient(180deg, #f8f9fa 0%, #e6e6e6 100%);
   min-height: 100vh;
-  display: grid;
-  align-content: center;
-  gap: 2rem;
-  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 2rem;
   font-family: "Poppins", sans-serif;
-  color: var(--color);
-  background: var(--bgColor);
 }
 
 .valores h1 {
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   font-weight: 800;
   text-transform: uppercase;
-  color: #222;
+  color: #002D5C;
 }
 
 /* Tarjetas de valores */
+/* =========================================================
+   CÓDIGO ORIGINAL DE SHARON (29/10/2025)
+   - Diseño profesional para la sección de valores
+   ========================================================= */
+.valores {
+  background: linear-gradient(180deg, #f8f9fa 0%, #e6e6e6 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 2rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.valores h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #002D5C;
+}
+
+/* =========================================================
+   CAMBIO HECHO POR SHARON (29/10/2025)
+   - Aplicación de colores del logo a las tarjetas de valores
+   - Se mejora el contraste y la legibilidad de texto
+   ========================================================= */
 .valores .banner-cards {
   display: flex;
   flex-wrap: wrap;
@@ -201,7 +233,7 @@ h3 {
 }
 
 .valores .banner-cards li {
-  width: 12em;
+  width: 13em;
   display: grid;
   grid-template:
     "icon"
@@ -211,31 +243,82 @@ h3 {
   gap: 1rem;
   padding: 2rem;
   text-align: center;
-  background: var(--accent-color);
+  background: #002D5C; /* 🔹 Fondo azul oscuro del logo */
+  border: 3px solid #FFD700; /* 🔸 Borde dorado elegante */
   border-radius: 16px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.valores .banner-cards li:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  position: relative;
+  overflow: hidden;
 }
 
+/* =========================================================
+   CAMBIO HECHO POR SHARON (29/10/2025)
+   - Efecto de brillo dorado sutil al pasar el cursor
+   ========================================================= */
+.valores .banner-cards li:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3), 0 0 8px rgba(255, 215, 0, 0.4);
+  background: linear-gradient(145deg, #002D5C, #003A7A);
+}
+
+/* ✨ Efecto dorado más suave */
+.valores .banner-cards li::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 215, 0, 0.35),
+    transparent
+  );
+  transform: rotate(0deg);
+  opacity: 0;
+  z-index: 1;
+}
+
+.valores .banner-cards li:hover::before {
+  animation: shineBorder 2s linear;
+  opacity: 1;
+}
+
+@keyframes shineBorder {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* =========================================================
+   TEXTO DENTRO DE LAS TARJETAS
+   (Se mantiene la tipografía original)
+   ========================================================= */
 .valores .banner-cards li .icon {
   font-size: 3rem;
-  color: #fff;
+  color: #FFD700; /* Ícono dorado */
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
 }
+
 .valores .banner-cards li .title {
   font-size: 1.3rem;
   font-weight: 600;
-  color: #fff;
+  color: #FFFFFF; /* Texto blanco */
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
+
 .valores .banner-cards li .descr {
   font-size: 0.9rem;
-  color: #f1f1f1;
+  color: #E6E6E6; /* Texto gris claro */
+  line-height: 1.6;
 }
 
+/* =========================================================
+   RESPONSIVIDAD
+   ========================================================= */
 @media (max-width: 768px) {
-  .textanimado { font-size: 3.5rem; }
+  .textanimado { font-size: 3rem; }
   .valores .banner-cards li { width: 100%; max-width: 18rem; }
 }
-

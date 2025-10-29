@@ -533,4 +533,73 @@ p{
 .material-symbols-outlined {
   vertical-align: middle;
 }
+/* =========================================================
+   CÓDIGO ORIGINAL DEL CARRUSEL
+   ========================================================= */
+.carousel-item img {
+  width: 100%;
+  height: 90vh;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 30%;
+  color: #fff;
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 45, 92, 0.3);
+}
+
+/* =========================================================
+   CAMBIO HECHO POR SHARON (29/10/2025)
+   - Puntitos del carrusel en color blanco
+   - Carrusel automático con transición fade
+   - Las imágenes corren como estaban
+   ========================================================= */
+
+.carousel {
+  overflow: hidden;
+}
+
+.carousel-indicators {
+  bottom: 1.5rem;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: #ffffff; /* Blanco */
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+  margin: 0 6px;
+  border: none;
+}
+
+.carousel-indicators .active {
+  background-color: #ffffff; /* Blanco activo */
+  opacity: 1;
+  transform: scale(1.3);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+.carousel-indicators [data-bs-target]:hover {
+  background-color: #ffffff;
+  opacity: 0.9;
+  transform: scale(1.2);
+}
+
+/* Ocultar flechas (solo se dejan los puntitos) */
+.carousel-control-prev,
+.carousel-control-next {
+  display: none;
+}
 
