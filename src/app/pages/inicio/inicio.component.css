@@ -602,4 +602,69 @@ p{
 .carousel-control-next {
   display: none;
 }
+/* =========================================================
+   CAMBIO HECHO POR SHARON (29/10/2025)
+   - Centrado perfecto del texto y botón del carrusel
+   - Mantiene visibilidad total de las imágenes
+   - No altera tipografías ni efectos previos
+   ========================================================= */
+
+.carousel-caption {
+  position: absolute;
+  top: 50%;                     /* centra verticalmente */
+  left: 50%;                    /* centra horizontalmente */
+  transform: translate(-50%, -50%);  /* ajuste fino */
+  text-align: center;           /* centra el texto */
+  width: 100%;
+  padding: 0 2rem;              /* espacio lateral para móviles */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ajuste fino del título dentro del carrusel */
+.carousel-caption h2 {
+  color: #ffffff;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow:
+    0 0 10px rgba(255, 255, 255, 0.7),
+    0 0 20px rgba(255, 215, 0, 0.4),
+    0 0 35px rgba(0, 0, 0, 0.8);
+  margin-bottom: 1.5rem;
+  transition: all 0.4s ease;
+}
+
+/* Brillo sutil al pasar el cursor */
+.carousel-caption h2:hover {
+  text-shadow:
+    0 0 15px rgba(255, 255, 255, 0.9),
+    0 0 25px rgba(255, 215, 0, 0.8),
+    0 0 40px rgba(255, 255, 255, 0.6);
+  transform: scale(1.03);
+}
+
+/* Botón con estilo dorado centrado */
+.carousel-caption .btn {
+  background: transparent;
+  color: #FFD700;
+  font-weight: bold;
+  border: 2px solid #FFD700;
+  border-radius: 30px;
+  padding: 10px 25px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+/* Efecto hover elegante */
+.carousel-caption .btn:hover {
+  color: #fff;
+  border-color: #fff;
+  box-shadow:
+    0 0 10px rgba(255, 215, 0, 0.8),
+    0 0 20px rgba(255, 255, 255, 0.5);
+  transform: scale(1.05);
+}
 

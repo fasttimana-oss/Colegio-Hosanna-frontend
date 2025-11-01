@@ -1,0 +1,36 @@
+/* =========================================================
+   CAMBIO HECHO POR SHARON (01/11/2025)
+   - Se aplicó color azul institucional al footer (#002D5C)
+   - Se mejoró el contraste del texto y botones sociales
+   - Se mantuvo coherencia visual con el navbar
+   ========================================================= */
+footer {
+  background-color: #002D5C !important;
+  color: #ffffff !important;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.5px;
+  border-top: 3px solid #FFD700; /* línea dorada superior */
+}
+
+/* Botones sociales */
+footer .btn-floating {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #FFD700; /* borde dorado */
+}
+
+footer .btn-floating:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(255, 215, 0, 0.5);
+}
+
+/* Texto del copyright */
+footer .text-body {
+  color: #FFD700 !important;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+footer .text-body:hover {
+  color: #ffffff !important;
+}
