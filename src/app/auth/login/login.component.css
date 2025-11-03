@@ -1,0 +1,165 @@
+/* =========================================================
+   CAMBIO HECHO POR SHARON (03/11/2025)
+   - Fondo oscuro sin imagen
+   - Campos blancos y sin bordes dorados
+   - Logo sin borde dorado, con brillo verde suave
+   - Diseño moderno con sombras y animaciones suaves
+   ========================================================= */
+
+/* Fondo oscuro a pantalla completa */
+.login-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #001830; /* azul oscuro casi negro */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Capa de profundidad */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 45, 92, 0.4),
+    rgba(0, 0, 0, 0.9)
+  );
+  z-index: 1;
+}
+
+/* Contenedor del formulario */
+.login-form {
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 16px;
+  padding: 50px 40px;
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+  animation: fadeInUp 1.2s ease forwards;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Logo sin borde dorado */
+.login-logo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: transparent; /* sin fondo */
+  margin: 0 auto 25px;
+  animation: pulse 2s infinite;
+  box-shadow: 0 0 18px rgba(37, 211, 102, 0.5);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(37, 211, 102, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 22px rgba(37, 211, 102, 0.9);
+  }
+}
+
+.login-logo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Título */
+.login-form h2 {
+  color: #f2f1eb;
+  font-weight: bold;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+/* Campos de entrada */
+.login-form .form-control {
+  background: #fff;
+  border: none;
+  color: #222;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 18px;
+  transition: all 0.3s ease;
+}
+
+.login-form .form-control:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(37, 211, 102, 0.7);
+}
+
+/* Botón principal */
+.btn-login {
+  background: #25d366;
+  color: #fff;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  transition: 0.3s;
+  letter-spacing: 0.5px;
+}
+
+.btn-login:hover {
+  background: #1ebe57;
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(37, 211, 102, 0.7);
+}
+
+/* Botón Volver */
+.btn-volver {
+  display: inline-block;
+  margin-top: 20px;
+  color: #25d366;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  font-size: 0.95rem;
+}
+
+.btn-volver:hover {
+  text-decoration: underline;
+  color: #1ebe57;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .login-form {
+    padding: 35px 25px;
+  }
+  .login-logo {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-form {
+    padding: 25px 20px;
+  }
+  .login-form h2 {
+    font-size: 1.5rem;
+  }
+}

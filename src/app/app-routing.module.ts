@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'Inicio', component: InicioComponent }, // Inicio real
   { path: 'nosotros', component: NosotrosComponent }, // Nosotros real
   {path: 'contacto', component:ContactoComponent},
+  
    { path: 'login', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) },
   // 👆 esto carga todo lo que esté en AuthRoutingModule
 
